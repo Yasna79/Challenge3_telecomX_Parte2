@@ -1,71 +1,96 @@
 # Challenge3_telecomX_Parte2
  Predicción de Cancelación (Churn)
-# Análisis y Modelado de Cancelación de Clientes (Churn)
-
-## Descripción
-
-Este proyecto tiene como objetivo identificar los factores que influyen en la cancelación de clientes (churn) y construir modelos predictivos para anticipar cuándo un cliente puede cancelar su servicio. Se utilizan técnicas de preprocesamiento, balanceo de clases, y distintos modelos de clasificación para evaluar el desempeño.
+# 📊 Análisis y Predicción de Cancelación de Clientes (Churn)
 
 ---
 
-## Dataset
+## 🔍 Descripción
 
-- Archivo: `datos_tratados.csv`
-- Variables: incluye características del cliente como duración del contrato, cargos mensuales y totales, tipo de contrato, etc.
-- Variable objetivo: `Churn` (1 = cliente canceló, 0 = cliente activo)
+Este proyecto tiene como objetivo identificar los factores que más influyen en la cancelación de clientes y construir modelos predictivos para anticipar cuándo un cliente podría cancelar su servicio. Se utilizan técnicas de preprocesamiento, balanceo de clases y distintos modelos de machine learning para lograrlo.
 
 ---
 
-## Pasos del Análisis
+## 🗂 Dataset
 
-1. **Preprocesamiento de Datos**
-   - Eliminación de columnas redundantes (e.g., `DailyCharges`)
-   - Codificación de variables categóricas con `LabelEncoder`
-   - Manejo de valores faltantes en la variable objetivo
-
-2. **Análisis Exploratorio**
-   - Análisis de correlación entre variables numéricas
-   - Visualizaciones de variables clave en relación a `Churn`
-
-3. **Balanceo de Clases**
-   - Uso de técnicas de undersampling, oversampling y SMOTE para equilibrar las clases
-
-4. **Modelado**
-   - Entrenamiento y evaluación de modelos: Regresión Logística, Random Forest, KNN, SVM, XGBoost
-   - Comparación de desempeño con métricas como F1-score, matriz de confusión, etc.
-
-5. **Interpretación**
-   - Análisis de importancia de variables para entender qué factores afectan más la cancelación
+- **Archivo:** `datos_tratados.csv`  
+- **Características:** Datos del cliente como duración del contrato, cargos mensuales y totales, tipo de contrato, entre otros.  
+- **Variable objetivo:** `Churn` (1 = Canceló, 0 = Activo)
 
 ---
 
-## Resultados Principales
+## 🛠 Proceso de Análisis
 
-- Las variables más importantes para predecir la cancelación son: `Tenure`, `ChargesTotal`, `Contract` y `PaymentMethod`.
-- Los modelos con mejor desempeño fueron Random Forest y XGBoost con un F1-score alrededor de 0.87-0.88.
-- La cancelación está asociada a clientes con menor antigüedad y contratos mensuales.
+1. **Preprocesamiento**  
+   - Eliminación de variables redundantes  
+   - Codificación de variables categóricas  
+   - Manejo de valores faltantes  
+
+2. **Análisis Exploratorio**  
+   - Matriz de correlación  
+   - Visualizaciones clave (boxplots, scatter plots)
+
+3. **Balanceo de Clases**  
+   - Técnicas de undersampling, oversampling y SMOTE para balancear `Churn`
+
+4. **Modelado**  
+   - Regresión Logística, Random Forest, KNN, SVM y XGBoost  
+   - Evaluación con métricas como F1-score, precisión y matriz de confusión
+
+5. **Interpretación**  
+   - Importancia de variables  
+   - Análisis de coeficientes y permutation importance
+
+---
+
+## 📈 Resultados Clave
+
+| Modelo              | F1 Score (Churn) | Comentarios                                   |
+|---------------------|------------------|-----------------------------------------------|
+| Random Forest       | ~0.88            | Excelente desempeño sin necesidad de escalado |
+| XGBoost             | ~0.87            | Gran capacidad para capturar relaciones complejas |
+| Regresión Logística | ~0.81            | Fácil de interpretar, buen punto de partida    |
+| SVM (lineal)        | ~0.80            | Rendimiento similar a regresión logística      |
+| KNN                 | ~0.75            | Más sensible al ruido y la escala               |
+
+🔹 **Mejor modelo:** Random Forest y XGBoost por su precisión y estabilidad.
 
 ---
 
-## Recomendaciones y Estrategias de Retención
+## 🔑 Factores que Impactan la Cancelación
 
-- Incentivar contratos a largo plazo para reducir churn.
-- Ofrecer descuentos o promociones a clientes con baja antigüedad.
-- Facilitar métodos de pago automáticos y flexibles.
-- Implementar un sistema de alertas tempranas usando los modelos predictivos para detectar clientes en riesgo.
+- **Tenure (Antigüedad):** Clientes con menos tiempo tienen mayor riesgo de cancelar.  
+- **ChargesTotal (Gasto Total):** Clientes con menor gasto total tienden a cancelar más.  
+- **Contract (Tipo de contrato):** Contratos mensuales tienen mayor churn comparado con contratos a largo plazo.  
+- **PaymentMethod (Método de pago):** Algunas modalidades están asociadas con mayor cancelación.
+
+---
+
+## 💡 Estrategias de Retención
+
+- Incentivar contratos de mayor duración con descuentos o beneficios exclusivos.  
+- Ofrecer promociones a clientes nuevos o con baja antigüedad.  
+- Facilitar métodos de pago automáticos para reducir fricciones.  
+- Implementar alertas tempranas con modelos predictivos para identificar clientes en riesgo.
 
 ---
 
-## Tecnologías y Librerías Utilizadas
+## 🚀 Tecnologías Utilizadas
 
-- Python 3
-- Pandas, NumPy
-- scikit-learn
-- imblearn (SMOTE)
-- XGBoost
-- Matplotlib, Seaborn
+- Python 3  
+- pandas, numpy  
+- scikit-learn  
+- imbalanced-learn (SMOTE)  
+- xgboost  
+- matplotlib, seaborn  
 
 ---
+
+
+
+---👤 Autor
+[Yasna Perez Montenegro] 
+
+
 
 
 
