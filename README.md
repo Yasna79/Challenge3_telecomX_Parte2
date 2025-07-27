@@ -88,8 +88,8 @@ Este proyecto tiene como objetivo identificar los factores que más influyen en 
 
 
 📌 Autor
-Desarrollado por: Yasna Perez Montenegro
-Repositorio base: https://github.com/Yasna79/Challenge3_telecomX_Parte2.git
+-Desarrollado por: Yasna Perez Montenegro
+-Repositorio base: https://github.com/Yasna79/Challenge3_telecomX_Parte2.git
 
 
 
