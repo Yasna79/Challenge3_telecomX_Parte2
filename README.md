@@ -88,7 +88,7 @@ Este proyecto tiene como objetivo identificar los factores que más influyen en 
 
 
 ---👤 Autor
-[Yasna Perez Montenegro] 
+Yasna Perez Montenegro
 
 
 
